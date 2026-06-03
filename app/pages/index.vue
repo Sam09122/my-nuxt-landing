@@ -1,8 +1,12 @@
 <template>
-  <main>
+  <main class="bg-white">
     <NavBar />
     <HeroSection />
-    <FeaturesSection />
+    <MarqueeSection /> 
+    <HowItWorksSection />
+    <PricingSection />
+    <ScheduleSection />
+    <OrderTracking />
     <FooterSection />
   </main>
 </template>

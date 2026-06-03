@@ -1,44 +1,42 @@
 <template>
-    <nav class="bg-green-900 border-b border-gray-700 px-6 py-4">
-        <div class="max-w-6xl mx-auto flex items-center justify-between">
-            <!-- Logo -->
-            <a href="/" class="text-white text-xl font-bold tracking-tight">
-                MyBrand
-            </a>
+  <nav class="fixed top-0 left-0 w-full z-50 px-8 py-5 flex items-center justify-between bg-gray-300 border-b border-blue-900">
+    
+    <!-- Logo -->
+    <a href="/" class="text-gray-900 text-lg font-bold uppercase tracking-widest">
+      KilanKiloan
+    </a>
 
-            <!-- Nav Links -->
-            <ul class="hidden md:flex items-center gap-8">
-                <li>
-                    <a href="#features" class="
-                        text-gray-300 hover:text-white transition-colors 
-                        font-semibold font-sans">
-                        Features
-                    </a>
-                </li>
-                <li>
-                    <a href="#about" class="
-                        text-gray-300 hover:text-white transition-colors 
-                        font-semibold font-sans">
-                        About
-                    </a>
-                </li>
-                <li>
-                    <a href="#contact" class="
-                        text-gray-300 hover:text-white transition-colors 
-                        font-semibold font-sans">
-                        Contact
-                    </a>
-                </li>
-            </ul>
+    <!-- Nav Links -->
+    <ul class="hidden md:flex items-center gap-10">
+      <li>
+        <a href="#how-it-works" class="text-sm uppercase tracking-widest text-gray-900 hover:text-blue-800 transition">
+          How It Works
+        </a>
+      </li>
+      <li>
+        <a href="#pricing" class="text-sm uppercase tracking-widest text-gray-900 hover:text-blue-800 transition">
+          Pricing
+        </a>
+      </li>
+      <li>
+        <a href="#track" class="text-sm uppercase tracking-widest text-gray-900 hover:text-blue-800 transition">
+          Track Order
+        </a>
+      </li>
+      <li>
+        <a href="#contact" class="text-sm uppercase tracking-widest text-gray-900 hover:text-blue-800 transition">
+          Contact
+        </a>
+      </li>
+    </ul>
 
-            <!-- CTA Button -->
-            <a href="#" class="
-                bg-yellow-600 hover:opacity-75 
-                text-white text-sm font-medium 
-                px-4 py-2 rounded-lg transition-colors">
-                Get Started 
-            </a>
+    <!-- CTA -->
+    <a
+      href="#schedule"
+      class="text-sm uppercase tracking-widest border border-gray-900 text-gray-900 px-5 py-2 hover:bg-black hover:text-white transition"
+    >
+      Schedule Pickup
+    </a>
 
-        </div>
-    </nav>
+  </nav>
 </template>

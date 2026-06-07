@@ -144,6 +144,8 @@
 </template>
 
 <script setup>
+const supabase = useSupabaseClient()
+
 const form = ref({
   name: '',
   phone: '',
@@ -153,7 +155,38 @@ const form = ref({
   service: 'Regular'
 })
 
-const submitOrder = () => {
-  alert(`Order confirmed! We'll pick up from ${form.value.address} on ${form.value.date} at ${form.value.time}.`)
+const submitOrder = async () => {
+  if (!form.value.name || !form.value.phone || !form.value.address || !form.value.date || !form.value.time) {
+    alert('Please fill in all fields')
+    return
+  }
+
+  const { error } = await supabase
+    .from('orders')
+    .insert({
+      customer_name: form.value.name,
+      phone: form.value.phone,
+      address: form.value.address,
+      pickup_date: form.value.date,
+      pickup_time: form.value.time,
+      service_type: form.value.service,
+      status: 'Order Received'
+    })
+
+  if (error) {
+    alert('Something went wrong. Please try again.')
+    console.error(error)
+  } else {
+    alert('Order confirmed! We will contact you shortly.')
+    form.value = {
+      name: '',
+      phone: '',
+      address: '',
+      date: '',
+      time: '',
+      service: 'Regular'
+    }
+  }
 }
 </script>
+
